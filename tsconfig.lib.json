@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "ES2015",
+    "outDir": "./lib/cjs"
+  },
+  "exclude": ["app/**/*.stories.tsx", "app/src/components/Accordion/lib/"],
+  "include": ["./app/src"]
+}

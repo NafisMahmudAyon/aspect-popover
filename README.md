@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aspect Popover
 
-## Getting Started
+A lightweight and customizable popover component for React, built with Tailwind CSS and Framer Motion.
 
-First, run the development server:
+![npm](https://img.shields.io/npm/v/aspect-popover)
+![license](https://img.shields.io/github/license/yourusername/aspect-popover)
+![downloads](https://img.shields.io/npm/dt/aspect-popover)
 
-```bash
-npm run dev
+## 🚀 Features
+
+- 🛠️ **Highly Customizable** – Easily modify styles and animations.
+- ⚡ **Lightweight & Performant** – Optimized for fast rendering.
+- 🎨 **TailwindCSS Support** – Seamlessly integrates with Tailwind.
+- 🏗️ **Framer Motion Animations** – Smooth, modern transitions.
+- 🔌 **Works with React 18 & 19** – Supports the latest React versions.
+
+---
+
+## 📦 Installation
+
+```sh
+npm install aspect-popover
 # or
-yarn dev
+yarn add aspect-popover
 # or
-pnpm dev
-# or
-bun dev
+pnpm add aspect-popover
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```tsx
+import React from "react";
+import { Popover } from "aspect-popover";
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+export default function Example() {
+  return (
+    <Popover trigger={<button>Open Popover</button>}>
+      <div className="p-4 bg-white shadow-lg rounded-lg">Hello, World!</div>
+    </Popover>
+  );
+}
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Props
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Prop        | Type                 | Default      | Description |
+|------------|---------------------|-------------|-------------|
+| `trigger`  | `ReactNode`          | `null`      | The element that toggles the popover |
+| `placement`| `"top" \| "bottom" \| "left" \| "right"` | `"bottom"` | Defines where the popover appears |
+| `open`     | `boolean`            | `false`     | Controls the visibility of the popover |
+| `onClose`  | `() => void`         | `undefined` | Callback when the popover closes |
+| `className`| `string`             | `""`        | Additional classes for styling |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Example with Custom Placement
 
-## Deploy on Vercel
+```tsx
+<Popover trigger={<button>Hover me</button>} placement="top">
+  <div className="p-4 bg-gray-100 border rounded">I'm on top!</div>
+</Popover>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Configuration
+
+Aspect Popover supports Tailwind CSS by default. If you're using Tailwind, ensure your `tailwind.config.js` includes:
+
+```js
+module.exports = {
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! To contribute:
+
+1. **Fork** the repository.
+2. **Clone** your fork and install dependencies:  
+   ```sh
+   git clone https://github.com/yourusername/aspect-popover.git
+   cd aspect-popover
+   npm install
+   ```
+3. **Make Changes** – Update the component or docs.
+4. **Commit & Push** – Follow conventional commit messages.
+5. **Open a Pull Request** – Submit your PR for review.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on [GitHub](https://github.com/yourusername/aspect-popover)!
+
+---
+
+Happy coding! 🚀
