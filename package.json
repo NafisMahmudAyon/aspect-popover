@@ -30,6 +30,12 @@
     "lib",
     "README.md"
   ],
+  "exports": {
+    "./Popover": {
+      "types": "./lib/esm/Popover/index.d.ts",
+      "default": "./lib/cjs/Popover/index.js"
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

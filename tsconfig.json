@@ -28,7 +28,13 @@
 			"@/*": ["./*"]
 		}
 	},
-	"include": [".next/types/**/*.ts", "**/*.mdx", "**/*.ts", "**/*.tsx", "app/src/index.jsx"],
+	"include": [
+		".next/types/**/*.ts",
+		"**/*.mdx",
+		"**/*.ts",
+		"**/*.tsx",
+		"app/src/Popover/Popover.jsx"
+	],
 	"exclude": ["node_modules", "./build/", "./lib/", "./.next/"]
 }
 

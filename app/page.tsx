@@ -1,7 +1,7 @@
 'use client'
-import React, { useState } from 'react';
-import { Popover } from './src';
-import { Settings, Bell, User, Menu } from 'lucide-react';
+import { Bell, Menu, Settings, User } from 'lucide-react';
+import { useState } from 'react';
+import { Popover } from './src/Popover/Popover';
 
 export default function Home() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
